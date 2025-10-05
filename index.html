@@ -1,45 +1,78 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ITF 2025</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <nav>
-            <p>68070307</p>
-            <h2>ITF Website</h2>
-            <p>Week 13</p>
-        </nav>
-        <nav>
-            <img src="coins.png" width="96" alt="big coin go brr"/>
-        </nav>
-        <div class="container">
-            <h2 id="my-title">Welcome to my ITF Website!</h2>
-			<hr>
-            
-            <h2>Account Overview</h2>
-            <p>Name:Rawiwat Pathomthanapong</p>
-            <p>Account Type:Saving</p>
-			<div>
-				<label for="my_account">current account:</label>
-				<input type="number" id="my_account" value="1000">
-			</div>
-			<div>
-				<label for="my_cash">current cash:</label>
-				<input type="number" id="my_input" value="1000">
-			</div>
-			<div>
-				<label for="my_input">current cash:</label>
-				<input type="number" id="my_input" value="1000">
-			</div>
-            <select id="chosen_operator">
-                <option>Deposit</option>
-                <option>Withdraw</option>
-            </ol>
-        </div>
-    </body>
-	<script src="script.js"></script>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITF Simple Bank</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="student-id">68070307</div>
+    <div class="title">ITF Website</div>
+    <div class="week">Week 13</div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1>ITF Simple Bank</h1>
+    <p>Welcome to my first HTML + CSS + JS website!</p>
+
+    <!-- ประวัติการฝากถอน -->
+    <textarea id="history" rows="4" cols="80" readonly>
+1, Current account balance: 1000, Current cash balance: 1000
+    </textarea>
+
+    <!-- Account Overview -->
+    <div class="section">
+      <h2>Account Overview</h2>
+      <div class="info">
+        <p><strong>Name:</strong> Rawiwat Pathomthanapong</p>
+        <p><strong>Type:</strong> Savings Account</p>
+      </div>
+    </div>
+
+    <!-- Balance Information -->
+    <div class="section">
+      <h2>Balance Information</h2>
+      <label>Current account balance:</label>
+      <input type="number" id="accountBalance" value="1000"><br>
+
+      <label>Current cash balance:</label>
+      <input type="number" id="cashBalance" value="1000"><br>
+
+      <button onclick="updateBalance()">Change</button>
+    </div>
+
+    <!-- Bank Operation -->
+    <div class="section">
+      <h2>Bank Operation</h2>
+      <label>Amount:</label>
+      <input type="number" id="amount" value="0">
+      <select id="operation">
+        <option value="deposit">Deposit</option>
+        <option value="withdraw">Withdraw</option>
+      </select>
+      <button onclick="proceed()">Proceed</button>
+    </div>
+
+    <!-- Currency Converter -->
+    <div class="section">
+      <h2>Currency Converter</h2>
+      <label>Input balance:</label>
+      <input type="number" id="inputValue" value="0"><br>
+      <label>Output balance:</label>
+      <input type="number" id="outputValue" value="0" readonly><br>
+      <label>Input currency:</label>
+      <select id="currency">
+        <option value="USD">USD</option>
+        <option value="THB">THB</option>
+      </select>
+      <button onclick="convert()">Convert</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,21 +1,59 @@
 body {
-    margin: 0;
-    background-color: aqua;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
-    background-color: #1665E5;
-    color: white;
+.navbar {
+  background-color: #0056d2;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  font-weight: bold;
 }
 
 .container {
-    margin: 8px 32px;
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#my-title {
-    color: rebeccapurple;
+h1 {
+  color: #333;
+}
+
+.section {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+input, select, textarea, button {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0042a5;
 }
